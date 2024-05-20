@@ -118,6 +118,15 @@ public class Testing {
 				  
 			  }
 		  }
+			  
+			  driver.findElement(By.xpath("//input[@id='hide-textbox']")).click();
+			  driver.findElement(By.xpath("//input[@id='show-textbox']")).click();
+			  driver.findElement(By.xpath("//input[@id='displayed-text']")).sendKeys("Test");
+			  driver.findElement(By.xpath("//input[@id='displayed-text']")).clear();
+			  Thread.sleep(2000);
+			  driver.findElement(By.xpath("//input[@id='hide-textbox']")).click();
+			  
+			
 		 
 		driver.close();
 		driver.quit();
